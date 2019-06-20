@@ -21,6 +21,10 @@ User stories:
 so that I can access websites I marked
 I would like to see a list of bookmarks
 
+2) As a user,
+so I can return to my favourite websites
+I would like to add a new bookmark to the list of bookmarks
+
 Database setup:
 
 ```
@@ -30,6 +34,14 @@ admin=# \c bookmark-manager;
 admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
 admin=# INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com'), ('http://www.google.com'), ('http://destroyallsoftware.com');
 ```
+
+Test Database setup:
+
+```
+admin=# CREATE DATABASE bookmark_manager_test;
+admin=# \c bookmark-manager_test;
+admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+
 
 Install TablePlus
 From: https://tableplus.io/

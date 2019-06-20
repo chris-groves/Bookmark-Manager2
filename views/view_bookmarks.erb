@@ -3,3 +3,9 @@ Bookmark Manager
 <% @array_of_bookmarks.each do |url| %>
   <li><%= url %></li>
 <% end %>
+
+
+<form action= '/bookmarks/new' method= 'post'>
+<input type="text" name="url"/>
+<input type="submit" value="Add Bookmark" />
+</form>
